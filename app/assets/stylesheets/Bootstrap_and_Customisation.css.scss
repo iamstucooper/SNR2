@@ -6,11 +6,13 @@ $navbar-default-bg:                white;
 $navbar-default-brand-color:       #c0392b;
 $brand-primary:                    #c0392b;
 $jumbotron-bg:                     white;
-$body-bg:						white;
+$body-bg:						   #ecf0f1;
 $padding-right:						150px;
 $padding-top: 						50px;
 $padding-bottom:					50px;
 $padding-left:						80px;
+$btn-default-bg:					#3498db;
+$btn-primary-bg:					#bdc3c7;					
 
 
 @import 'bootstrap-sprockets';
@@ -28,3 +30,4 @@ ul
 {
     list-style-type: none;
 }
+
