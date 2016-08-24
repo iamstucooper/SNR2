@@ -8,21 +8,23 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                  <div class= "Container"><br>
-                     <strong>
-                    <a <%= link_to "Advice First Insurance", root_path %>
-                                          </a>
-                                          </strong>
+                  <div class= "Container">
+                    <% if user_signed_in? %>
+                       <%= link_to "Advice First Insurance", home_path, class: "navbar-brand" %>
+                        <% else %>
+                        <%= link_to "Advice First Insurance", "#", class: "navbar-brand" %>
+                        <% end -%>
                 <br>
-              <li><%= link_to "About", about_path %></li>
-              <br>
-              <li><%= link_to "News", news_path %></li>
-              <br>
-              <li><%= link_to "Contact", contact_path %></li>
-              <br>
-              <li><%= link_to "Disclosure", disclosure_path %></li>
-              <br>
-              <li><%= link_to "Privacy", privacy_path %></li>
+                <% if user_signed_in? %>
+              <li><%= link_to "About", about_path %></li><br>
+              <li><%= link_to "News", news_path %></li><br>
+              <li><%= link_to "Contact", contact_path %></li><br>
+              <li><%= link_to "Disclosure", disclosure_path %></li><br>
+              <li><%= link_to "Privacy", privacy_path %></li><br>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li><br>
+              <% else %>
+                  <li><%= link_to "Sign in", new_user_session_path %>
+              <% end -%>
             </ul>
         </div>
 
