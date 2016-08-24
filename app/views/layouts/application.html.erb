@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pinteresting2</title>
+  <title>Advice First Insurance</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,11 +9,14 @@
 </head>
 <body>
 
-<%= render 'layouts/sidebar' %>
+
+
+<%= render 'layouts/header' %>
 	<div class="container">
 		<%= yield %>
-		<% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-info") %>
+  </div>
 <% end %>
 	</div>
 	</body>
