@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def privacy
   end
 
+  def policies
+  end
+
 end
