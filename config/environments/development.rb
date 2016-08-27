@@ -41,4 +41,8 @@ Rails.application.configure do
 
   #Required for Heroku
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Paperclip Fix from Github
+  Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
+  Paperclip.options[:command_path] = 'C:\Program Files\ImageMagick-7.0.2-Q16'
 end

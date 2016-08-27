@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <div class="panel panel-default">
   <div class="panel-heading">
   	<h2><strong>Policy Listing</strong></h2>
-  	</div>	
+  	</div>	<br>
+
+<div class="container">
+  <%= image_tag @pin.image.url :medium %>
+</div>
 
 <div class="container">
 <p>
   <h3><strong>Description:</strong></h3><br>
   <strong><%= @pin.description %></strong>
   <br>
-  <p>Insurer:</p>
-  <p>Level of Cover:</p>
-  <p>Sum Insured:</p>
-  <p>Excess:</p>
-  <p>Exclusions:</p>
+  <p>Insurer:               Vero Insurance</p>
+  <p>Level of Cover:        Full Sum Insurance Replacement</p>
+  <p>Sum Insured:           $450,000 + GST</p>
+  <p>Excess:                $250 </p>
+  <p>Exclusions:            Nil</p>
 </p>
 </div>
 </div>
